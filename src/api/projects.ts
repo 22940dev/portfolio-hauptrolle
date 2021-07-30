@@ -9,7 +9,7 @@ type Projects =
 
 type Response = {
   user: {
-    [key in Projects]: SideProject;
+    [name in Projects]: SideProject;
   };
 };
 
