@@ -1,11 +1,11 @@
 import { fetchData, SideProject } from "./github";
 
 type Projects =
-  | "stitchesUtils"
-  | "stitchesReset"
-  | "reactTodo"
-  | "hauptrolleMe"
-  | "nextplate";
+  | "blenderresourcesTest"
+  | "osmosfeed"
+  | "webtoolsTest"
+  | "favdevPortfolios"
+  | "nuxthNews";
 
 type Response = {
   user: {
@@ -25,19 +25,19 @@ export const fetchProjects = async () => {
   const query = `
 query {
   user (login: "22940dev") {
-    stitchesUtils: repository(name: "stitches-utils") {
+    blenderresourcesTest: repository(name: "blender-resources-test") {
       ${fields}
     }
-    stitchesReset: repository(name: "stitches-reset") {
+    osmosfeed: repository(name: "osmosfeed") {
       ${fields}
     }
-    reactTodo: repository(name: "react-todo") {
+    webtoolsTest: repository(name: "webtools-test") {
       ${fields}
     }
-    hauptrolleMe: repository(name: "hauptrolle.me") {
+    favdevPortfolios: repository(name: "fav-dev-portfolios") {
       ${fields}
     }
-    nextplate: repository(name: "nextplate") {
+    nuxthNews: repository(name: "nuxt-hnews") {
       ${fields}
     }
   }
@@ -47,11 +47,11 @@ query {
 
   return {
     projects: [
-      data.user.stitchesUtils,
-      data.user.stitchesReset,
-      data.user.reactTodo,
-      data.user.hauptrolleMe,
-      data.user.nextplate,
+      data.user.blenderresourcesTest,
+      data.user.osmosfeed,
+      data.user.webtoolsTest,
+      data.user.favdevPortfolios,
+      data.user.nuxthNews,
     ],
   };
 };
