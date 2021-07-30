@@ -11,7 +11,7 @@ type Response = {
 export const fetchStarred = async () => {
   const query = `
     query {
-      user (login: "hauptrolle") {
+      user (login: "22940dev") {
         starredRepositories(last: 15) {
           nodes {
             id
