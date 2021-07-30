@@ -24,7 +24,7 @@ export const fetchProjects = async () => {
 
   const query = `
 query {
-  user (login: "hauptrolle") {
+  user (login: "22940dev") {
     stitchesUtils: repository(name: "stitches-utils") {
       ${fields}
     }
